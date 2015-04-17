@@ -16,7 +16,7 @@ public class GameActivity extends MenuActivity
         implements OnMapReadyCallback{
 
 
-
+GoogleMap myMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +26,16 @@ public class GameActivity extends MenuActivity
         MapFragment mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+      /*  PolylineOptions rectOptions = new PolylineOptions()
+                .add(new LatLng(57.055454, 9.905867))
+                .add(new LatLng(58.055454, 9.905867))
+                .add(new LatLng(58.055454, 10.905867))
+                .add(new LatLng(57.055454, 10.905867))
+                .add(new LatLng(57.055454, 9.905867));
+
+        Polyline polyline = myMap.addPolyline(rectOptions);*/
     }
 
     @Override
@@ -40,6 +50,7 @@ public class GameActivity extends MenuActivity
                 .title("Sydney")
                 .snippet("The most populous city in Australia.")
                 .position(sydney));
+
     }
 
     @Override
@@ -63,6 +74,8 @@ public class GameActivity extends MenuActivity
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
 
 
