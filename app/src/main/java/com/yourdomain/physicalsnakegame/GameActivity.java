@@ -14,7 +14,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class GameActivity extends MenuActivity
         implements OnMapReadyCallback{
-
+/*gg*/
 
 GoogleMap myMap;
     @Override
